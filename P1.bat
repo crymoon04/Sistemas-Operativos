@@ -43,6 +43,7 @@ echo ===============================
 echo          NIVEL FACIL
 echo ===============================
 
+:pregunta1_f
 echo Pregunta 1:
 echo ¿Cual es el resultado de la suma binaria de 1001 + 0110?
 echo.
@@ -54,24 +55,24 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="a" (
     echo Correcto!
     set /a correctas_f+=1
-) 
-if /i "%answer%"=="b" (
-   echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
-)
-if /i "%answer%"=="c" (
-   echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
-)
-if /i "%answer%"=="d" (
-   echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
     set /a incorrectas_f+=1
 ) else (
-    echo opcion no valida
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta1_f
 )
 
 pause
 
+:pregunta2_f
 cls
 echo Pregunta 2:
 echo ¿Cual es el valor decimal del numero binario 1101?
@@ -84,12 +85,23 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="a" (
     echo Correcto!
     set /a correctas_f+=1
-) else (
-    echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_f+=1
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
+    set /a incorrectas_f+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta2_f
 )
 pause
 
+:pregunta3_f
 cls
 echo Pregunta 3:
 echo ¿Cual es el resultado de la suma binaria de 1110 - 1011?
@@ -102,12 +114,23 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="b" (
     echo Correcto!
     set /a correctas_f+=1
-) else (
-    echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="a" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_f+=1
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
+    set /a incorrectas_f+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta3_f
 )
 pause
 
+:pregunta4_f
 cls
 echo Pregunta 4:
 echo Convierte 23 en decimal a binario
@@ -120,12 +143,23 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="d" (
     echo Correcto!
     set /a correctas_f+=1
-) else (
-    echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_f+=1
+) else if /i "%answer%"=="a" (
+   echo Incorrecto.
+    set /a incorrectas_f+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta4_f
 )
 pause
 
+:pregunta5_f
 cls
 echo Pregunta 5:
 echo Convierte 101110 en binario a decimal
@@ -138,12 +172,23 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="d" (
     echo Correcto!
     set /a correctas_f+=1
-) else (
-    echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_f+=1
+) else if /i "%answer%"=="a" (
+   echo Incorrecto.
+    set /a incorrectas_f+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta5_f
 )
 pause
 
+:pregunta6_f
 cls
 echo Pregunta 6:
 echo ¿Cual es el resultado de la operacion logica AND entre 1010 y 0111?
@@ -156,27 +201,48 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="a" (
     echo Correcto!
     set /a correctas_f+=1
-) else (
-    echo Incorrecto. La respuesta correcta es d
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_f+=1
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
+    set /a incorrectas_f+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta6_f
 )
 pause
 
+:pregunta7_f
 cls
 echo Pregunta 7:
 echo ¿Cual es el resultado de la operacion logica OR entre 1001 y 0101?
 echo.
-echo a) 1101
+echo a) 1110
 echo b) 0001
-echo c) 1110
+echo c) 1101
 echo d) 0100
 set /p answer="Seleccione una opcion: "
-if /i "%answer%"=="a" (
+if /i "%answer%"=="c" (
     echo Correcto!
     set /a correctas_f+=1
-) else (
-    echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_f+=1
+) else if /i "%answer%"=="a" (
+   echo Incorrecto. 
+    set /a incorrectas_f+=1
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
+    set /a incorrectas_f+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta7_f
 )
 pause
 
