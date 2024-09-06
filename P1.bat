@@ -261,6 +261,7 @@ echo ===============================
 echo        NIVEL INTERMEDIO
 echo ===============================
 
+:pregunta1_i
 echo Pregunta 1:
 echo convierte el numero 57 a binario, hexadecimal y octal 
 echo.
@@ -272,12 +273,23 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="a" (
     echo Correcto!
     set /a correctas_i+=1
-) else (
-    echo Incorrecto. La respuesta correcta es a
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_i+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_i+=1
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
+    set /a incorrectas_i+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta1_i
 )
 pause
 
+:pregunta2_i
 cls
 echo Pregunta 2: 
 echo convierte el numero 19 a binario, hexadecimal y octal
@@ -290,12 +302,23 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="d" (
     echo Correcto!
     set /a correctas_i+=1
-) else (
-    echo Incorrecto. La respuesta correcta es c
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_i+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_i+=1
+) else if /i "%answer%"=="a" (
+   echo Incorrecto.
+    set /a incorrectas_i+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta2_i
 )
 pause
 
+:pregunta3_i
 cls
 echo Pregunta 3: 
 echo convierte el numero 52 a binario, hexadecimal y octal
@@ -308,12 +331,23 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="b" (
     echo Correcto!
     set /a correctas_i+=1
-) else (
-    echo Incorrecto. La respuesta correcta es c
+) else if /i "%answer%"=="a" (
+   echo Incorrecto. 
     set /a incorrectas_i+=1
+) else if /i "%answer%"=="c" (
+   echo Incorrecto. 
+    set /a incorrectas_i+=1
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
+    set /a incorrectas_i+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta3_i
 )
 pause
 
+:pregunta4_i
 cls
 echo Pregunta 4: 
 echo convierte el numero 103 a binario, hexadecimal y octal
@@ -326,9 +360,19 @@ set /p answer="Seleccione una opcion: "
 if /i "%answer%"=="c" (
     echo Correcto!
     set /a correctas_i+=1
-) else (
-    echo Incorrecto. La respuesta correcta es c
+) else if /i "%answer%"=="b" (
+   echo Incorrecto. 
     set /a incorrectas_i+=1
+) else if /i "%answer%"=="a" (
+   echo Incorrecto. 
+    set /a incorrectas_i+=1
+) else if /i "%answer%"=="d" (
+   echo Incorrecto.
+    set /a incorrectas_i+=1
+) else (
+    echo Opcion no valida. Ingrese a, b, c o d.
+    pause
+    goto pregunta4_i
 )
 pause
 
