@@ -30,6 +30,7 @@ void* multiply_matrices(void* arg) {
 int main() {
     printf("Matriz A:\n");
     for (int i = 0; i < N; i++) {
+        //Falta  for (int j = 0; j < N; j++)   
             A[i][j] = rand() % 10; 
             printf("%d ", A[i][j]);
         }
